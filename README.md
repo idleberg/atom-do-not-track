@@ -23,10 +23,12 @@ Change to your Atom packages directory:
 
 **Windows**
 
-```cmd
+```powershell
 # Powershell
 $ cd $Env:USERPROFILE\.atom\packages
+```
 
+```cmd
 :: Command Prompt
 $ cd %USERPROFILE%\.atom\packages
 
