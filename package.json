@@ -14,8 +14,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "postinstall": "npm run build",
     "prepublishOnly": "npm run build",
-    "start": "rollup --watch --config",
-    "test": "echo 'Error: no test specified' && exit 1"
+    "start": "rollup --watch --config"
   },
   "keywords": [],
   "repository": {
