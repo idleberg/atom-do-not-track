@@ -16,7 +16,12 @@
     "prepublishOnly": "npm run build",
     "start": "rollup --watch --config"
   },
-  "keywords": [],
+  "keywords": [
+    "do not track",
+    "dnt",
+    "no tracking",
+    "tracking blocker"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/atom-do-not-track"
