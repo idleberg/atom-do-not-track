@@ -4,7 +4,7 @@
   "description": "A package to block web-requests to tracking-servers",
   "private": false,
   "main": "./lib/do-not-track",
-  "typings": "./types/index.d.ts",
+  "typings": "./types",
   "scripts": {
     "analyze": "source-map-explorer lib/**/*.js",
     "build": "rollup --config",
