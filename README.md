@@ -27,7 +27,7 @@ Change to your Atom packages directory:
 # Powershell
 $ cd $Env:USERPROFILE\.atom\packages
 
-# Command Prompt
+:: Command Prompt
 $ cd %USERPROFILE%\.atom\packages
 
 ```
