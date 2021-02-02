@@ -1,0 +1,29 @@
+:root {
+  --border-style: 1px solid rgba(255, 255, 255, .25);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt {
+  border-bottom: var(--border-style);
+  font-weight: normal;
+  grid-column-start: 1;
+  text-align: left;
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+dd {
+  border-bottom: var(--border-style);
+  grid-column-start: 2;
+  text-align: right;
+
+  &:last-of-type {
+    border: none;
+  }
+}
