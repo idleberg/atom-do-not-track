@@ -77,7 +77,7 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
-    "*.(c|le|sc)ss": [
+    "*.scss": [
       "prettier --write",
       "stylelint --fix"
     ]
