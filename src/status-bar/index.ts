@@ -1,10 +1,11 @@
 import { CompositeDisposable } from 'atom';
-import disposify from 'disposify';
-// import './status-bar.scss';
 import { getConfig } from '../utils';
-import type { StatusBar } from 'atom/status-bar';
+import disposify from 'disposify';
+
 import Tooltip from './tooltip.svelte';
 import Button from './button.svelte';
+
+import type { StatusBar } from 'atom/status-bar';
 
 export default class StatusBarView {
   subscriptions: CompositeDisposable;
@@ -45,12 +46,5 @@ export default class StatusBarView {
       });
 
       return element;
-  }
-
-  elementWithText(text: string, tag = 'div'): HTMLElement {
-    const el = document.createElement(tag);
-    el.textContent = text;
-
-    return el;
   }
 }
