@@ -1,10 +1,11 @@
 import { event } from './events';
-import { remote } from 'electron';
 import { getConfig } from './utils';
+import { remote } from 'electron';
+import type { ConfigValues } from 'atom';
 
 function composeFilter() {
   const urls: string[] = [];
-  const defaultTracking: DefaultTracking = getConfig('defaultTracking');
+  const defaultTracking: ConfigValues[string] = getConfig('defaultTracking');
 
   if (defaultTracking.metrics) urls.push('*://central.github.com/api/usage/atom');
   if (defaultTracking.analytics) urls.push('*://*.google-analytics.com/*');
