@@ -1,7 +1,7 @@
 {
   "name": "do-not-track",
   "version": "0.0.0",
-  "description": "A package to block web-requests to ad- and tracking-servers",
+  "description": "A package to block web-requests to tracking-servers",
   "private": false,
   "main": "./lib/do-not-track",
   "typings": "./types/index.d.ts",
