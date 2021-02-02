@@ -35,7 +35,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/do-not-track.ts',
+    input: 'src/index.ts',
     output: {
       dir: 'lib',
       exports: 'default',
