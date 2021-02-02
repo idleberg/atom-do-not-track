@@ -2,7 +2,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from "rollup-plugin-terser";
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-// import scss from 'rollup-plugin-scss';
 import svelte from 'rollup-plugin-svelte';
 import typescript from '@rollup/plugin-typescript';
 import autoPreprocess from 'svelte-preprocess';
@@ -20,9 +19,6 @@ const plugins = [
       ? terser()
       : undefined
   ),
-  // scss({
-  //   output: join('./styles/do-not-track.css')
-  // }),
   svelte({
     compilerOptions: {
       dev: !production
