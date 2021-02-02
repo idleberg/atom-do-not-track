@@ -35,7 +35,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      dir: 'lib',
+      file: 'lib/do-not-track.js',
       exports: 'default',
       format: 'cjs',
       sourcemap: true
