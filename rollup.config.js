@@ -24,9 +24,11 @@ const plugins = [
   //   output: join('./styles/do-not-track.css')
   // }),
   svelte({
-    preprocess: autoPreprocess(),
-    dev: !production,
-    emitCss: false
+    compilerOptions: {
+      dev: !production
+    },
+    emitCss: false,
+    preprocess: autoPreprocess()
   }),
   typescript({
     allowSyntheticDefaultImports: true
