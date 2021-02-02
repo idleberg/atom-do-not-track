@@ -27,8 +27,9 @@ const plugins = [
     preprocess: autoPreprocess()
   }),
   typescript({
-    allowSyntheticDefaultImports: true
-  })
+    allowSyntheticDefaultImports: true,
+  }),
+  production && terser()
 ];
 
 export default [
