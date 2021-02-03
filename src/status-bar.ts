@@ -15,13 +15,13 @@ export default class StatusBarView {
   }
 
   attach(statusBar: StatusBar): void {
-    const position = getConfig('interfaceAlignment') === 'left'
+    const addTile = getConfig('interfaceAlignment') === 'left'
       ? 'addLeftTile'
       : 'addRightTile';
 
     this.subscriptions.add(
       disposify(
-        statusBar[position]({
+        statusBar[addTile]({
           item: this.render(),
           priority: 100
         })
