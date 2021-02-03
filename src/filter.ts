@@ -24,7 +24,7 @@ function init(): void {
   const filter = composeFilter();
 
   remote.session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
-    console.log('Connection blocked', details);
+    if (atom.inDevMode()) console.log('Connection blocked', details);
 
     event.emit('do-not-track:blocked-connection', details);
 
