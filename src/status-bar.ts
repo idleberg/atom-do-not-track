@@ -1,9 +1,9 @@
 import { CompositeDisposable } from 'atom';
-import { getConfig } from '../utils';
+import { getConfig } from './utils';
 import disposify from 'disposify';
 
-import Tooltip from './tooltip.svelte';
-import Button from './button.svelte';
+import Tooltip from './components/tooltip.svelte';
+import Button from './components/button.svelte';
 
 import type { StatusBar } from 'atom/status-bar';
 

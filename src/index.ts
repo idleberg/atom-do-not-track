@@ -2,6 +2,7 @@ import { CompositeDisposable } from "atom";
 import configSchema from "./config";
 import initFilter from './filter';
 import StatusBarView from "./status-bar";
+
 import type { StatusBar } from 'atom/status-bar';
 
 export default {
