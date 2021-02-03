@@ -2,6 +2,13 @@
   import { event } from '../events';
   import { getConfig } from '../utils';
 
+  function handleClick() {
+    const activeEditor = atom.workspace.getActivePane();
+    const activeView = atom.views.getView(activeEditor);
+
+    atom.commands.dispatch(activeView, 'do-not-track:toggle-settings');
+  }
+
   let alwaysShowCounter = getConfig('alwaysShowCounter');
   let state = 'subtle'
   let counter = 0;
@@ -17,9 +24,9 @@
   });
 </script>
 
-<button class="inline-block text-{state}">
+<button class="inline-block text-{state}" on:click={handleClick}>
   <span class="icon icon-stop"></span>
-  {alwaysShowCounter ? counter : ''}
+  {alwaysShowCounter && counter}
 </button>
 
 <style src="./button.scss"></style>

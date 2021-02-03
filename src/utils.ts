@@ -1,9 +1,10 @@
 const packageName =  'do-not-track';
 
 function getConfig(key: string): unknown {
-  return key
+  return (key
     ? atom.config.get(`${packageName}.${key}`)
-    : atom.config.get(packageName);
+    : atom.config.get(packageName)
+  );
 }
 
 export {
