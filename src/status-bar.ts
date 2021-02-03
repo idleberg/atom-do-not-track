@@ -2,8 +2,8 @@ import { CompositeDisposable } from 'atom';
 import { getConfig } from './utils';
 import disposify from 'disposify';
 
-import Tooltip from './components/tooltip.svelte';
 import Button from './components/button.svelte';
+import Tooltip from './components/tooltip.svelte';
 
 import type { StatusBar } from 'atom/status-bar';
 
@@ -33,7 +33,6 @@ export default class StatusBarView {
       const element = document.createElement('do-not-track-status-bar');
 
       const tooltip = document.createElement('div');
-      tooltip.id = 'tooltip';
       atom.tooltips.add(element, { item: tooltip });
 
       new Tooltip({
