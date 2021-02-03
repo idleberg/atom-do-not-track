@@ -15,8 +15,7 @@ export default class StatusBarView {
   }
 
   attach(statusBar: StatusBar): void {
-    const interfaceAlignment = getConfig('interfaceAlignment');
-    const position = interfaceAlignment === 'left'
+    const position = getConfig('interfaceAlignment') === 'left'
       ? 'addLeftTile'
       : 'addRightTile';
 
