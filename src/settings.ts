@@ -1,5 +1,6 @@
 import { CompositeDisposable, Dock } from 'atom';
 import { getConfig } from './utils';
+import disposify from 'disposify';
 
 import Settings from './components/settings.svelte';
 
@@ -8,6 +9,7 @@ export default class SettingsView {
 
   constructor() {
     this.subscriptions = new CompositeDisposable();
+    this.init();
   }
 
   getTitle(): string {
@@ -43,11 +45,14 @@ export default class SettingsView {
     );
   }
 
-  show(): void {
+  init(): void {
     atom.workspace.open(this, {
-      activatePane: false
+      activatePane: false,
+      activateItem: false
     });
+  }
 
+  show(): void {
     this.getDock().show();
   }
 
@@ -60,6 +65,6 @@ export default class SettingsView {
   }
 
   destroy(): void {
-		if (this?.subscriptions) this.subscriptions.dispose();
+    if (this?.subscriptions) this.subscriptions.dispose();
 	}
 }

@@ -1,28 +1,17 @@
-dl {
-  --dnt-border-style: 1px solid rgba(255, 255, 255, .25);
-
-  display: grid;
-  grid-template-columns: max-content auto;
-
-  dt {
-    border-bottom: var(--dnt-border-style);
-    font-weight: normal;
-    grid-column-start: 1;
-    text-align: left;
-
-    &:last-of-type {
-      border: none;
-    }
+section.do-no-track {
+  .list-item {
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.25;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
-  dd {
-    border-bottom: var(--dnt-border-style);
-    grid-column-start: 2;
-    text-align: right;
-
-    &:last-of-type {
-      border: none;
-    }
+  .divider {
+    border-top: 1px dashed rgba(255, 255, 255, .25);
+    flex: 1 1 0;
+    margin-right: 10px;
+    margin-top: .80em;
   }
 }
-
