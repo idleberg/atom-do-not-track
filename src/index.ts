@@ -20,7 +20,6 @@ export default {
 
     // Register commands
     this.subscriptions.add(
-      this.instance,
       atom.commands.add("atom-workspace", {
         "do-not-track:hello-world": () => {
           console.log('Hello World');
