@@ -1,4 +1,4 @@
-export default {
+const configSchema = {
   interfaceAlignment: {
     title: 'Interface Alignment',
     description: 'Specifies on which side the UI aligns. The change will only take effect on the next launch.',
@@ -55,4 +55,29 @@ export default {
       }
     }
   }
+};
+
+const trackingURLs = {
+  metrics: [
+    '*://central.github.com/api/usage/atom'
+  ],
+  analytics: [
+    '*://*.google-analytics.com/*',
+    '*://google-analytics.com/*'
+  ],
+  tagManager: [
+    '*://*.googletagmanager.com/*',
+    '*://googletagmanager.com/*'
+  ],
+  matomo: [
+    '*://*/matomo.js*',
+    '*://*/matomo.php*',
+    '*://*/piwik.js*',
+    '*://*/piwik.php*'
+  ]
+};
+
+export {
+  configSchema,
+  trackingURLs
 };

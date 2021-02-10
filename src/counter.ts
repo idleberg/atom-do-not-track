@@ -1,4 +1,6 @@
 import store from './store';
+import { trackingURLs } from './config';
+import multimatch from 'multimatch';
 
 function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void {
   store.update(writable => {
@@ -6,25 +8,19 @@ function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void
     writable.buttonClass = 'error';
 
     switch(true) {
-      case details.url.includes('://central.github.com/api/usage/atom'):
+      case multimatch(details.url, trackingURLs.metrics).length > 0:
         writable.services.metrics.counter += 1;
         break;
 
-      case details.url.includes('://google-analytics.com/'):
-      case details.url.includes('://www.google-analytics.com/'):
+      case multimatch(details.url, trackingURLs.analytics).length > 0:
         writable.services.analytics.counter += 1;
         break;
 
-      case details.url.includes('://googletagmanager.com/'):
-      case details.url.includes('://www.googletagmanager.com/'):
+      case multimatch(details.url, trackingURLs.tagManager).length > 0:
         writable.services.tagManager.counter += 1;
         break;
 
-      case details.url.includes('matomo-tracking'):
-      case details.url.includes('matomo.js'):
-      case details.url.includes('matomo.php'):
-      case details.url.includes('piwik.js'):
-      case details.url.includes('piwik.php'):
+      case multimatch(details.url, trackingURLs.matomo).length > 0:
         writable.services.matomo.counter += 1;
         break;
 

@@ -1,5 +1,6 @@
 import updateCounter from './counter';
 import { getConfig } from './utils';
+import { trackingURLs } from './config';
 import { remote } from 'electron';
 import type { ConfigValues } from 'atom';
 
@@ -7,25 +8,10 @@ function composeFilter() {
   const urls: string[] = [];
   const defaultTracking: ConfigValues[string] = getConfig('defaultTracking');
 
-  if (defaultTracking.metrics) urls.push('*://central.github.com/api/usage/atom');
-
-  if (defaultTracking.analytics) {
-    urls.push('*://*.google-analytics.com/*')
-    urls.push('*://google-analytics.com/*')
-  }
-
-  if (defaultTracking.tagManager) {
-    urls.push('*://*.googletagmanager.com/*')
-    urls.push('*://googletagmanager.com/*')
-  }
-
-  if (defaultTracking.matomo) {
-    urls.push('*://*/matomo-tracking.*');
-    urls.push('*://*/matomo.js*');
-    urls.push('*://*/matomo.php*');
-    urls.push('*://*/piwik.js*');
-    urls.push('*://*/piwik.php*');
-  }
+  if (defaultTracking.metrics) urls.push(...trackingURLs.metrics);
+  if (defaultTracking.analytics) urls.push(...trackingURLs.analytics);
+  if (defaultTracking.tagManager) urls.push(...trackingURLs.tagManager);
+  if (defaultTracking.matomo) urls.push(...trackingURLs.matomo);
 
   return { urls };
 }
