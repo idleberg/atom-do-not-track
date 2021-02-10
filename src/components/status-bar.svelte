@@ -1,5 +1,5 @@
 <script>
-  import { event } from '../events';
+  import { onDestroy } from 'svelte';
   import { getConfig } from '../utils';
   import store from '../store';
 
@@ -17,6 +17,8 @@
     counter = value.counter;
   });
 
+  onDestroy(unsubscribe);
+
   let alwaysShowCounter = getConfig('alwaysShowCounter');
   atom.config.observe('do-not-track.alwaysShowCounter', isVisible => {
     alwaysShowCounter = isVisible;
@@ -28,4 +30,9 @@
   {alwaysShowCounter && counter}
 </button>
 
-<style src="./button.scss"></style>
+<style>
+   button {
+    background-color: inherit;
+    border: none;
+  }
+</style>

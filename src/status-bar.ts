@@ -3,7 +3,7 @@ import { getConfig } from './utils';
 import disposify from 'disposify';
 
 import Tooltip from './components/tooltip.svelte';
-import Button from './components/button.svelte';
+import StatusbarItem from './components/status-bar.svelte';
 
 import type { StatusBar } from 'atom/status-bar';
 
@@ -42,7 +42,7 @@ export default class StatusBarView {
         target: tooltip
       });
 
-      new Button({
+      new StatusbarItem({
         target: element
       });
 

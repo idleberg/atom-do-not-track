@@ -1,6 +1,7 @@
 import { CompositeDisposable } from 'atom';
 import configSchema from './config';
 import initFilter from './filter';
+
 import SettingsView from './settings';
 import StatusBarView from './status-bar';
 

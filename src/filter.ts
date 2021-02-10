@@ -1,4 +1,4 @@
-import { event } from './events';
+import updateCounter from './counter';
 import { getConfig } from './utils';
 import { remote } from 'electron';
 import type { ConfigValues } from 'atom';
@@ -26,7 +26,7 @@ function init(): void {
   remote.session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
     console.log('Connection blocked', details);
 
-    event.emit('do-not-track:blocked-connection', details);
+    updateCounter(details);
 
     callback({
       cancel: true
