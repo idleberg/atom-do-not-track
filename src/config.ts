@@ -71,6 +71,7 @@ const trackingURLs = {
   ],
   matomo: [
     '*://*/matomo.js*',
+    '*://*/matomo.js*',
     '*://*/matomo.php*',
     '*://*/piwik.js*',
     '*://*/piwik.php*'
