@@ -20,7 +20,7 @@ export default {
     title: 'Always Show Counter',
     description: 'Displays a counter next to the status-bar icon',
     type: 'boolean',
-    default: false,
+    default: true,
     order: 2
   },
   defaultTracking: {
