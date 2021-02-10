@@ -48,7 +48,7 @@ export default {
         order: 2
       },
       matomo: {
-        title: 'Matomo',
+        title: 'Matomo/Piwik',
         type: 'boolean',
         default: true,
         order: 3
