@@ -22,7 +22,11 @@ function getHighlightClass(counter) {
 <list-item>
   <div class="inline-block">{name}</div>
   <divider/>
-  <div class="inline-block{highlight && (' ' + getHighlightClass(counter))}">{counter}</div>
+  {#if highlight }
+    <code class="inline-block {getHighlightClass(counter)}">{counter}</code>
+  {:else}
+    <div class="inline-block">{counter}</div>
+  {/if}
 </list-item>
 
 <style>
