@@ -3,13 +3,6 @@
   import { getConfig } from '../utils';
   import store from '../store';
 
-  function handleClick() {
-    const activeEditor = atom.workspace.getActivePane();
-    const activeView = atom.views.getView(activeEditor);
-
-    atom.commands.dispatch(activeView, 'do-not-track:toggle-settings');
-  }
-
   let buttonClass;
   let counter;
   const unsubscribe = store.subscribe(value => {
@@ -25,7 +18,7 @@
   });
 </script>
 
-<button class="inline-block text-{buttonClass}" on:click={handleClick}>
+<button class="inline-block text-{buttonClass}">
   <span class="icon icon-stop"></span>
   {alwaysShowCounter ? counter : ""}
 </button>
