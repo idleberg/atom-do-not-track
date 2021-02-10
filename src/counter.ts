@@ -20,7 +20,7 @@ function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void
         writable.services.tagManager.counter += 1;
         break;
 
-      case details.url.includes('matomo-tracking'):
+      case multimatch(details.url, trackingURLs.matomo).length > 0:
       case details.url.includes('matomo.js'):
       case details.url.includes('matomo.php'):
       case details.url.includes('piwik.js'):

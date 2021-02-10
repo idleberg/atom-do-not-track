@@ -70,11 +70,10 @@ const trackingURLs = {
     '*://googletagmanager.com/*'
   ],
   matomo: [
-    '*://*/matomo.js*',
-    '*://*/matomo.js*',
-    '*://*/matomo.php*',
-    '*://*/piwik.js*',
-    '*://*/piwik.php*'
+    '*://*/*matomo.js*',
+    '*://*/*matomo.php*',
+    '*://*/*piwik.js*',
+    '*://*/*piwik.php*'
   ]
 };
 
