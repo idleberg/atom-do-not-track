@@ -2,8 +2,8 @@ import { CompositeDisposable } from 'atom';
 import { getConfig } from './utils';
 import disposify from 'disposify';
 
-import Button from './components/button.svelte';
 import Tooltip from './components/tooltip.svelte';
+import StatusbarItem from './components/status-bar.svelte';
 
 import type { StatusBar } from 'atom/status-bar';
 
@@ -15,13 +15,14 @@ export default class StatusBarView {
   }
 
   attach(statusBar: StatusBar): void {
-    const addTile = getConfig('interfaceAlignment') === 'left'
+    const position = (getConfig('interfaceAlignment') === 'left'
       ? 'addLeftTile'
-      : 'addRightTile';
+      : 'addRightTile'
+    );
 
     this.subscriptions.add(
       disposify(
-        statusBar[addTile]({
+        statusBar[position]({
           item: this.render(),
           priority: 100
         })
@@ -30,16 +31,18 @@ export default class StatusBarView {
   }
 
   render(): HTMLElement {
-      const element = document.createElement('do-not-track-status-bar');
-
+      const element = document.createElement('do-not-track-button');
       const tooltip = document.createElement('div');
-      atom.tooltips.add(element, { item: tooltip });
+
+      atom.tooltips.add(element, {
+        item: tooltip
+      });
 
       new Tooltip({
         target: tooltip
       });
 
-      new Button({
+      new StatusbarItem({
         target: element
       });
 

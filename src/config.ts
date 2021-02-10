@@ -1,4 +1,4 @@
-export default {
+const configSchema = {
   interfaceAlignment: {
     title: 'Interface Alignment',
     description: 'Specifies on which side the UI aligns. The change will only take effect on the next launch.',
@@ -20,7 +20,7 @@ export default {
     title: 'Always Show Counter',
     description: 'Displays a counter next to the status-bar icon',
     type: 'boolean',
-    default: false,
+    default: true,
     order: 2
   },
   defaultTracking: {
@@ -48,11 +48,36 @@ export default {
         order: 2
       },
       matomo: {
-        title: 'Matomo',
+        title: 'Matomo/Piwik',
         type: 'boolean',
         default: true,
         order: 3
       }
     }
   }
+};
+
+const trackingURLs = {
+  metrics: [
+    '*://central.github.com/api/usage/atom'
+  ],
+  analytics: [
+    '*://*.google-analytics.com/*',
+    '*://google-analytics.com/*'
+  ],
+  tagManager: [
+    '*://*.googletagmanager.com/*',
+    '*://googletagmanager.com/*'
+  ],
+  matomo: [
+    '*://*/*matomo.js*',
+    '*://*/*matomo.php*',
+    '*://*/*piwik.js*',
+    '*://*/*piwik.php*'
+  ]
+};
+
+export {
+  configSchema,
+  trackingURLs
 };

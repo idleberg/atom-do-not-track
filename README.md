@@ -52,10 +52,6 @@ Install dependencies:
 cd do-not-track && npm install
 ```
 
-## Usage
-
-*No description*
-
 ## License
 
 This work is licensed under the [MIT License](LICENSE)
