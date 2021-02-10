@@ -21,8 +21,8 @@ export default writable({
     },
     matomo: {
       counter: 0,
-      name: 'Matomo',
-      shortName: 'Matomo'
+      name: 'Matomo/Piwik',
+      shortName: 'Matomo/Piwik'
     },
     others: {
       counter: 0,
