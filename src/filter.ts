@@ -8,8 +8,16 @@ function composeFilter() {
   const defaultTracking: ConfigValues[string] = getConfig('defaultTracking');
 
   if (defaultTracking.metrics) urls.push('*://central.github.com/api/usage/atom');
-  if (defaultTracking.analytics) urls.push('*://*.google-analytics.com/*');
-  if (defaultTracking.tagManager) urls.push('*://*.tagManager.com/*');
+
+  if (defaultTracking.analytics) {
+    urls.push('*://*.google-analytics.com/*')
+    urls.push('*://google-analytics.com/*')
+  }
+
+  if (defaultTracking.tagManager) {
+    urls.push('*://*.googletagmanager.com/*')
+    urls.push('*://googletagmanager.com/*')
+  }
 
   if (defaultTracking.matomo) {
     urls.push('*://*/matomo-tracking.*');
