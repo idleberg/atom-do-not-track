@@ -13,8 +13,10 @@ function composeFilter() {
 
   if (defaultTracking.matomo) {
     urls.push('*://*/matomo-tracking.*');
-    urls.push('*://*/matomo.js');
-    urls.push('*://*/matomo.php');
+    urls.push('*://*/matomo.js*');
+    urls.push('*://*/matomo.php*');
+    urls.push('*://*/piwik.js*');
+    urls.push('*://*/piwik.php*');
   }
 
   return { urls };
