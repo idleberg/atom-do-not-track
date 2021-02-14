@@ -10,6 +10,3 @@ yarn-error.log
 .rollup.cache/
 .yo-rc.json
 tsconfig.tsbuildinfo
-
-# Compiled Source
-lib/
