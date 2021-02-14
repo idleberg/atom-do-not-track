@@ -1,5 +1,16 @@
 import { writable } from 'svelte/store';
 
+function loadState() {
+  const state = localStorage.getItem('do-not-track:custom-urls') || "[]";
+
+  try {
+    const parsedState = JSON.parse(state);
+    return parsedState;
+  } catch (err) {
+    return [];
+  }
+}
+
 export default writable({
   counter: 0,
   buttonClass: 'subtle',
@@ -28,6 +39,7 @@ export default writable({
       counter: 0,
       name: 'Others',
       shortName: 'Others'
-    }
-  }
+    },
+  },
+  customUrls: loadState()
 });

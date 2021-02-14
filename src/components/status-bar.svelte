@@ -17,12 +17,12 @@
     counter = value.counter;
   });
 
-  onDestroy(unsubscribe);
-
   let alwaysShowCounter = getConfig('alwaysShowCounter');
   atom.config.observe('do-not-track.alwaysShowCounter', isVisible => {
     alwaysShowCounter = isVisible;
   });
+
+  onDestroy(unsubscribe);
 </script>
 
 <button class="inline-block text-{buttonClass}" on:click={handleClick}>

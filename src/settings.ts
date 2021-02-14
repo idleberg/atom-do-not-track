@@ -1,6 +1,5 @@
 import { CompositeDisposable, Dock } from 'atom';
 import { getConfig } from './utils';
-import disposify from 'disposify';
 
 import Settings from './components/settings.svelte';
 

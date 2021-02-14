@@ -43,6 +43,7 @@
     }
   },
   "dependencies": {
+    "browser-extension-url-match": "^0.3.3",
     "disposify": "^1.0.0",
     "multimatch": "^5.0.0",
     "svelte": "^3.32.1"

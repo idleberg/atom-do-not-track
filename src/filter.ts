@@ -1,7 +1,8 @@
-import updateCounter from './counter';
 import { getConfig } from './utils';
-import { trackingURLs } from './config';
 import { remote } from 'electron';
+import { trackingURLs } from './config';
+import store from './store';
+import updateCounter from './counter';
 import type { ConfigValues } from 'atom';
 
 function composeFilter() {
@@ -12,6 +13,13 @@ function composeFilter() {
   if (defaultTracking.analytics) urls.push(...trackingURLs.analytics);
   if (defaultTracking.tagManager) urls.push(...trackingURLs.tagManager);
   if (defaultTracking.matomo) urls.push(...trackingURLs.matomo);
+
+  let customUrls;
+  store.subscribe(value => {
+    customUrls = value.customUrls;
+  });
+
+  if (customUrls.length) urls.push(...customUrls);
 
   return { urls };
 }
