@@ -12,7 +12,6 @@
     "lint:code": "eslint --no-error-on-unmatched-pattern ./src/**/*.ts",
     "lint:styles": "stylelint --allow-empty-input styles/*.{css,less}",
     "lint": "npm-run-all --parallel lint:*",
-    "postinstall": "npm run build",
     "prepublishOnly": "npm run build",
     "start": "rollup --watch --config"
   },
