@@ -27,7 +27,7 @@
 
 <button class="inline-block text-{buttonClass}" on:click={handleClick}>
   <span class="icon icon-stop"></span>
-  {alwaysShowCounter ? counter : ""}
+  {alwaysShowCounter && counter !== 0 ? counter : ""}
 </button>
 
 <style>
