@@ -91,7 +91,7 @@
   <div class="block">
     <atom-panel>
       <div class="inset-panel">
-        <div class="panel-heading">Custom URL</div>
+        <div class="panel-heading">Custom URLs</div>
         <div class="panel-body padded">
           <p>Here you can add match patterns for URLs. These consist of three parts: scheme, host, and path. The scheme and host are separated by <code>://</code>.
             See the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">MDN documentation</a> for details.</p>
