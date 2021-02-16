@@ -54,7 +54,9 @@ cd do-not-track && npm install
 
 ## Usage
 
-By default, this package blocks requests for Atom Metrics, Google Analytics, Google Tag Manager and Matomo/Piwik. This behaviour can be changed in the package settings. Additionally, you can block custom URL patterns in the packages settings pane (see *Do Not Track: Toggle Settings*).
+By default, this package blocks requests for Atom Metrics, Google Analytics, Google Tag Manager and Matomo/Piwik. This behaviour can be changed in the package settings.
+
+Additionally, you can block custom URL patterns in the packages settings pane. You can open it by clicking on tbe Do Not Track status-bar or by running *Do Not Track: Toggle Settings* from your command palette.
 
 ## License
 
