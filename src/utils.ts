@@ -1,7 +1,7 @@
 // import matchPattern from 'match-pattern';
 import { matchPattern } from 'browser-extension-url-match';
 
-const packageName =  'do-not-track';
+const packageName = 'do-not-track';
 
 function getConfig(key: string): unknown {
   return (key
