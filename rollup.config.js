@@ -14,11 +14,6 @@ const plugins = [
   nodeResolve({
     preferBuiltins: true
   }),
-  (
-    production
-      ? terser()
-      : undefined
-  ),
   svelte({
     compilerOptions: {
       dev: !production
@@ -39,7 +34,7 @@ export default [
       file: 'lib/do-not-track.js',
       exports: 'default',
       format: 'cjs',
-      sourcemap: true
+      sourcemap: production ? false : true
     },
     external: [
       // Atom
