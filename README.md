@@ -4,6 +4,8 @@
 [![apm](https://flat.badgen.net/apm/v/do-not-track)](https://atom.io/packages/do-not-track)
 [![apm](https://flat.badgen.net/apm/dl/do-not-track)](https://atom.io/packages/do-not-track)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-do-not-track)](https://circleci.com/gh/idleberg/atom-do-not-track)
+[![David](https://flat.badgen.net/david/dep/idleberg/atom-do-not-track)](https://david-dm.org/idleberg/atom-do-not-track)
+
 
 # Description
 
