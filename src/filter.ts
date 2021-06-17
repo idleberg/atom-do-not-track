@@ -14,6 +14,7 @@ function composeFilter() {
   if (defaultTracking.analytics) urls.push(...trackingURLs.analytics);
   if (defaultTracking.tagManager) urls.push(...trackingURLs.tagManager);
   if (defaultTracking.matomo) urls.push(...trackingURLs.matomo);
+  if (defaultTracking.microsoft) urls.push(...trackingURLs.microsoft);
 
   let customUrls;
   store.subscribe(value => {

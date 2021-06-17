@@ -40,6 +40,11 @@ export default writable({
       name: 'Matomo/Piwik',
       shortName: 'Matomo/Piwik'
     },
+    microsoft: {
+      counter: 0,
+      name: 'Microsoft',
+      shortName: 'Microsoft'
+    },
     others: {
       counter: 0,
       name: 'Others',

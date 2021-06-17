@@ -58,12 +58,21 @@ const configSchema = {
         type: 'boolean',
         default: true,
         order: 5
+      },
+      microsoft: {
+        title: 'Microsoft',
+        type: 'boolean',
+        default: true,
+        order: 6
       }
     }
   }
 };
 
 const trackingURLs = {
+  adobe: [
+    '*://cc-api-data.adobe.io/*'
+  ],
   metrics: [
     '*://central.github.com/api/usage/atom'
   ],
@@ -83,8 +92,8 @@ const trackingURLs = {
     '*://*/*piwik.js*',
     '*://*/*piwik.php*'
   ],
-  adobe: [
-    '*://cc-api-data.adobe.io/*'
+  micosoft: [
+    '*://*.pipe.aria.microsoft.com/*'
   ]
 };
 
