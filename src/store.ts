@@ -15,6 +15,11 @@ export default writable({
   counter: 0,
   buttonClass: 'subtle',
   services: {
+    adobe: {
+      counter: 0,
+      name: 'Adobe Data API',
+      shortName: 'Adobe'
+    },
     metrics: {
       counter: 0,
       name: 'Atom Metrics',

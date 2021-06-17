@@ -8,6 +8,10 @@ function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void
     state.buttonClass = 'error';
 
     switch(true) {
+      case multimatch(details.url, trackingURLs.adobe).length > 0:
+        state.services.adobe.counter += 1;
+        break;
+
       case multimatch(details.url, trackingURLs.metrics).length > 0:
         state.services.metrics.counter += 1;
         break;

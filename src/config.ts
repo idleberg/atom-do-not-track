@@ -29,29 +29,35 @@ const configSchema = {
     type: 'object',
     order: 3,
     properties: {
+      adobe: {
+        title: 'Adobe',
+        type: 'boolean',
+        default: true,
+        order: 1
+      },
       metrics: {
         title: 'Atom Metrics',
         type: 'boolean',
         default: true,
-        order: 1
+        order: 2
       },
       analytics: {
         title: 'Google Analytics',
         type: 'boolean',
         default: true,
-        order: 2
+        order: 3
       },
       tagManager: {
         title: 'Google Tag Manager',
         type: 'boolean',
         default: true,
-        order: 2
+        order: 4
       },
       matomo: {
         title: 'Matomo/Piwik',
         type: 'boolean',
         default: true,
-        order: 3
+        order: 5
       }
     }
   }
@@ -74,6 +80,9 @@ const trackingURLs = {
     '*://*/*matomo.php*',
     '*://*/*piwik.js*',
     '*://*/*piwik.php*'
+  ],
+  adobe: [
+    '*://cc-api-data.adobe.io/*'
   ]
 };
 
