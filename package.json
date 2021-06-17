@@ -1,6 +1,6 @@
 {
   "name": "do-not-track",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A package to block web-requests to tracking-servers",
   "private": false,
   "main": "./lib/do-not-track",
