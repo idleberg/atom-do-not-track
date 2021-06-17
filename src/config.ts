@@ -68,6 +68,8 @@ const trackingURLs = {
     '*://central.github.com/api/usage/atom'
   ],
   analytics: [
+    '*://*.app-measurement.com/*',
+    '*://app-measurement.com/*',
     '*://*.google-analytics.com/*',
     '*://google-analytics.com/*'
   ],
