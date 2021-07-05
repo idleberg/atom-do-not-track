@@ -19,7 +19,14 @@
     "do not track",
     "dnt",
     "no tracking",
-    "tracking blocker"
+    "tracking blocker",
+    "analytics",
+    "google analytics",
+    "matomo",
+    "piwik",
+    "telemetry",
+    "metrica",
+    "yandex metrica"
   ],
   "repository": {
     "type": "git",
