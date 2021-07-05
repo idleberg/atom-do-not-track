@@ -45,6 +45,11 @@ export default writable({
       name: 'Microsoft',
       shortName: 'Microsoft'
     },
+    yandex: {
+      counter: 0,
+      name: 'Yandex',
+      shortName: 'Yandex Metrica'
+    },
     others: {
       counter: 0,
       name: 'Others',

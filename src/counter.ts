@@ -32,9 +32,13 @@ function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void
         state.services.matomo.counter += 1;
         break;
 
-        case multimatch(details.url, trackingURLs.microsoft).length > 0:
-          state.services.microsoft.counter += 1;
-          break;
+      case multimatch(details.url, trackingURLs.microsoft).length > 0:
+        state.services.microsoft.counter += 1;
+        break;
+
+      case multimatch(details.url, trackingURLs.yandex).length > 0:
+        state.services.yandex.counter += 1;
+        break;
 
       default:
         state.services.others.counter += 1;

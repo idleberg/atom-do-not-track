@@ -64,6 +64,12 @@ const configSchema = {
         type: 'boolean',
         default: true,
         order: 6
+      },
+      yandex: {
+        title: 'Yandex Metrica',
+        type: 'boolean',
+        default: true,
+        order: 7
       }
     }
   }
@@ -92,8 +98,12 @@ const trackingURLs = {
     '*://*/*piwik.js*',
     '*://*/*piwik.php*'
   ],
-  micosoft: [
+  microsoft: [
     '*://*.pipe.aria.microsoft.com/*'
+  ],
+  yandex: [
+    '*://api-metrica.yandex.net/*',
+    '*://api-metrika.yandex.net/*'
   ]
 };
 
