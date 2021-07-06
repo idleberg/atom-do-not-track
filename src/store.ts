@@ -48,7 +48,7 @@ export default writable({
     yandex: {
       counter: 0,
       name: 'Yandex',
-      shortName: 'Yandex Metrica'
+      shortName: 'Yandex'
     },
     others: {
       counter: 0,
