@@ -50,7 +50,7 @@ $ git clone https://github.com/idleberg/atom-do-not-track do-not-track
 Install dependencies:
 
 ```bash
-cd do-not-track && npm install
+$ cd do-not-track && npm install && npm run build
 ```
 
 ## Usage
