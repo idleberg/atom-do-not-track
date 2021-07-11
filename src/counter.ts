@@ -1,8 +1,9 @@
 import store from './store';
 import { trackingURLs } from './config';
-import multimatch from 'multimatch';
 
-function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void {
+async function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): Promise<void> {
+  const multimatch = (await import('multimatch')).default;
+
   store.update(state => {
     state.counter += 1;
     state.buttonClass = 'error';
@@ -48,4 +49,6 @@ function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): void
   });
 }
 
-export default updateCount;
+export {
+  updateCount
+};

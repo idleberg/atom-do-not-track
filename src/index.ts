@@ -1,7 +1,5 @@
 import { CompositeDisposable } from 'atom';
 import { configSchema } from './config';
-import initFilter from './filter';
-
 import SettingsView from './settings';
 import StatusBarView from './status-bar';
 
@@ -14,10 +12,11 @@ export default {
   statusbar: null,
 
   async activate(): Promise<void> {
-    initFilter();
-
-    this.settings = new SettingsView();
     this.statusbar = new StatusBarView();
+    this.settings = new SettingsView();
+
+    const { init: initFilter } = await import('./filter');
+    await initFilter();
 
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();

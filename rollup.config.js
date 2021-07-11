@@ -23,6 +23,7 @@ const plugins = [
   }),
   typescript({
     allowSyntheticDefaultImports: true,
+    moduleResolution: 'node'
   }),
   production && terser()
 ];

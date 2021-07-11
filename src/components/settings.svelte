@@ -3,7 +3,6 @@
   import { onDestroy } from 'svelte';
   import ListItem from './list-item.svelte';
   import store from '../store';
-  import updateFilter from '../filter';
 
   let services;
   let customUrls;
@@ -24,7 +23,7 @@
     }
   }
 
-  function updateState(customUrls) {
+  async function updateState(customUrls) {
     const previousCustomUrls = customUrls;
 
     store.update(state => {
@@ -33,9 +32,10 @@
       return state;
     });
 
+    const { init: updateFilter } = await import('../filter');
 
     try {
-      updateFilter();
+      await updateFilter();
     } catch (err) {
       store.update(state => {
         state.customUrls = previousCustomUrls;

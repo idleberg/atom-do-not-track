@@ -2,7 +2,7 @@ import { getConfig } from './utils';
 import { remote } from 'electron';
 import { trackingURLs } from './config';
 import store from './store';
-import updateCounter from './counter';
+import { updateCount } from './counter';
 import type { ConfigValues } from 'atom';
 
 function composeFilter() {
@@ -26,13 +26,13 @@ function composeFilter() {
   return { urls };
 }
 
-function init(): void {
+async function init(): Promise<void> {
   const filter = composeFilter();
 
-  remote.session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
+  remote.session.defaultSession.webRequest.onBeforeSendHeaders(filter, async (details, callback) => {
     console.log('Connection blocked', details);
 
-    updateCounter(details);
+    await updateCount(details);
 
     callback({
       cancel: true
@@ -40,4 +40,6 @@ function init(): void {
   });
 }
 
-export default init;
+export {
+  init
+};
