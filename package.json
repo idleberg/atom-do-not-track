@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "description": "A package to block web-requests to tracking-servers",
   "private": false,
-  "main": "./lib/do-not-track",
+  "main": "./lib/index",
   "typings": "./types",
   "scripts": {
     "analyze": "source-map-explorer lib/**/*.js",
