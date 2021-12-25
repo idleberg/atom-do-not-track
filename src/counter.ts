@@ -13,6 +13,10 @@ async function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails)
         state.services.adobe.counter += 1;
         break;
 
+      case multimatch(details.url, trackingURLs.bugsnag).length > 0:
+        state.services.bugsnag.counter += 1;
+        break;
+
       case multimatch(details.url, trackingURLs.metrics).length > 0:
         state.services.metrics.counter += 1;
         break;

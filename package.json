@@ -27,7 +27,8 @@
     "piwik",
     "telemetry",
     "metrica",
-    "yandex metrica"
+    "yandex metrica",
+    "bugsnag"
   ],
   "repository": {
     "type": "git",

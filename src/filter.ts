@@ -10,6 +10,7 @@ function composeFilter() {
   const defaultTracking: ConfigValues[string] = getConfig('defaultTracking');
 
   if (defaultTracking.adobe) urls.push(...trackingURLs.adobe);
+  if (defaultTracking.bugsnag) urls.push(...trackingURLs.bugsnag);
   if (defaultTracking.metrics) urls.push(...trackingURLs.metrics);
   if (defaultTracking.analytics) urls.push(...trackingURLs.analytics);
   if (defaultTracking.tagManager) urls.push(...trackingURLs.tagManager);

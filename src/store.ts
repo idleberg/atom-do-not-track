@@ -20,6 +20,11 @@ export default writable({
       name: 'Adobe Data API',
       shortName: 'Adobe'
     },
+    bugsnag: {
+      counter: 0,
+      name: 'Bugsnag',
+      shortName: 'Bugsnag'
+    },
     metrics: {
       counter: 0,
       name: 'Atom Metrics',

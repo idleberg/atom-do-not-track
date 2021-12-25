@@ -35,6 +35,12 @@ const configSchema = {
         default: true,
         order: 1
       },
+      bugsnag: {
+        title: 'Bugsnag',
+        type: 'boolean',
+        default: true,
+        order: 1
+      },
       metrics: {
         title: 'Atom Metrics',
         type: 'boolean',
@@ -78,6 +84,9 @@ const configSchema = {
 const trackingURLs = {
   adobe: [
     '*://cc-api-data.adobe.io/*'
+  ],
+  bugsnag: [
+    '*://notify.bugsnag.com/*'
   ],
   metrics: [
     '*://central.github.com/api/usage/atom'
