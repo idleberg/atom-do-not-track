@@ -1,10 +1,9 @@
 # do-not-track
 
-[![apm](https://flat.badgen.net/apm/license/do-not-track)](https://atom.io/packages/do-not-track)
-[![apm](https://flat.badgen.net/apm/v/do-not-track)](https://atom.io/packages/do-not-track)
-[![apm](https://flat.badgen.net/apm/dl/do-not-track)](https://atom.io/packages/do-not-track)
-[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-do-not-track)](https://circleci.com/gh/idleberg/atom-do-not-track)
-[![David](https://flat.badgen.net/david/dep/idleberg/atom-do-not-track)](https://david-dm.org/idleberg/atom-do-not-track)
+[![License](https://img.shields.io/github/license/idleberg/atom-do-not-track?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/blob/main/LICENSE)
+![Release](https://img.shields.io/github/v/release/idleberg/atom-do-not-track?style=for-the-badge)
+![Downloads](https://img.shields.io/pulsar/dt/do-not-track?style=for-the-badge&color=slateblue)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-do-not-track/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/actions)
 
 
 # Description
