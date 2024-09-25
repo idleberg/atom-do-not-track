@@ -1,8 +1,8 @@
 # do-not-track
 
 [![License](https://img.shields.io/github/license/idleberg/atom-do-not-track?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/blob/main/LICENSE)
-![Release](https://img.shields.io/github/v/release/idleberg/atom-do-not-track?style=for-the-badge)
-![Downloads](https://img.shields.io/pulsar/dt/do-not-track?style=for-the-badge&color=slateblue)
+[![Release](https://img.shields.io/github/v/release/idleberg/atom-do-not-track?style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/releases)
+[![Downloads](https://img.shields.io/pulsar/dt/do-not-track?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/do-not-track)
 [![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-do-not-track/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/actions)
 
 
