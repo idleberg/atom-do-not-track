@@ -25,7 +25,7 @@ function composeFilter() {
   return { urls };
 }
 
-async function init(): Promise<void> {
+export async function init(): Promise<void> {
   const filter = composeFilter();
 
   remote.session.defaultSession.webRequest.onBeforeSendHeaders(filter, async (details, callback) => {
@@ -38,7 +38,3 @@ async function init(): Promise<void> {
     });
   });
 }
-
-export {
-  init
-};

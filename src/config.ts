@@ -1,4 +1,4 @@
-const configSchema = {
+export const configSchema = {
   interfaceAlignment: {
     title: 'Interface Alignment',
     description: 'Specifies on which side the UI aligns. The change will only take effect on the next launch.',
@@ -81,7 +81,7 @@ const configSchema = {
   }
 };
 
-const trackingURLs = {
+export const trackingURLs = {
   adobe: [
     '*://cc-api-data.adobe.io/*'
   ],
@@ -114,9 +114,4 @@ const trackingURLs = {
     '*://api-metrica.yandex.net/*',
     '*://api-metrika.yandex.net/*'
   ]
-};
-
-export {
-  configSchema,
-  trackingURLs
 };

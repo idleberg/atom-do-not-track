@@ -1,7 +1,7 @@
 import store from './store';
 import { trackingURLs } from './config';
 
-async function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): Promise<void> {
+export async function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails): Promise<void> {
   const multimatch = (await import('multimatch')).default;
 
   store.update(state => {
@@ -52,7 +52,3 @@ async function updateCount(details: Electron.OnBeforeSendHeadersListenerDetails)
     return state;
   });
 }
-
-export {
-  updateCount
-};
