@@ -9,13 +9,11 @@ function composeFilter() {
   const urls: string[] = [];
   const defaultTracking: ConfigValues[string] = getConfig('defaultTracking');
 
-  if (defaultTracking.adobe) urls.push(...trackingURLs.adobe);
-  if (defaultTracking.bugsnag) urls.push(...trackingURLs.bugsnag);
-  if (defaultTracking.metrics) urls.push(...trackingURLs.metrics);
-  if (defaultTracking.analytics) urls.push(...trackingURLs.analytics);
-  if (defaultTracking.tagManager) urls.push(...trackingURLs.tagManager);
-  if (defaultTracking.matomo) urls.push(...trackingURLs.matomo);
-  if (defaultTracking.microsoft) urls.push(...trackingURLs.microsoft);
+  for (const key of Object.keys(defaultTracking)) {
+    if (defaultTracking[key] && trackingURLs[key]) {
+      urls.push(...trackingURLs[key]);
+    }
+  }
 
   let customUrls;
   store.subscribe(value => {
