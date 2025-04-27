@@ -42,8 +42,8 @@ export default writable({
     },
     matomo: {
       counter: 0,
-      name: 'Matomo/Piwik',
-      shortName: 'Matomo/Piwik'
+      name: 'Matomo',
+      shortName: 'Matomo'
     },
     microsoft: {
       counter: 0,

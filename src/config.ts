@@ -60,7 +60,7 @@ export const configSchema = {
         order: 4
       },
       matomo: {
-        title: 'Matomo/Piwik',
+        title: 'Matomo',
         type: 'boolean',
         default: true,
         order: 5
