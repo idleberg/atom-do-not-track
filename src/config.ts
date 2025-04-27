@@ -95,22 +95,30 @@ export const configSchema = {
 
 export const trackingURLs = {
   adobe: [
+    '*://cc-api-data.adobe.io',
     '*://cc-api-data.adobe.io/*'
   ],
   bugsnag: [
+    '*://notify.bugsnag.com',
     '*://notify.bugsnag.com/*'
   ],
   metrics: [
     '*://central.github.com/api/usage/atom'
   ],
   analytics: [
+    '*://*.app-measurement.com',
     '*://*.app-measurement.com/*',
+    '*://app-measurement.com',
     '*://app-measurement.com/*',
+    '*://*.google-analytics.com',
     '*://*.google-analytics.com/*',
+    '*://google-analytics.com',
     '*://google-analytics.com/*'
   ],
   tagManager: [
+    '*://*.googletagmanager.com',
     '*://*.googletagmanager.com/*',
+    '*://googletagmanager.com',
     '*://googletagmanager.com/*'
   ],
   matomo: [
@@ -120,16 +128,19 @@ export const trackingURLs = {
     '*://*/*piwik.php*'
   ],
   microsoft: [
+    '*://*.pipe.aria.microsoft.com',
     '*://*.pipe.aria.microsoft.com/*'
   ],
   posthog: [
+    '*://*.i.posthog.com',
     '*://*.i.posthog.com/*',
   ],
   sentry: [
+    '*://*.ingest.sentry.io',
     '*://*.ingest.sentry.io/*',
   ],
   yandex: [
-    '*://api-metrica.yandex.net/*',
+    '*://api-metrica.yandex.net',
     '*://api-metrika.yandex.net/*'
   ]
 };
