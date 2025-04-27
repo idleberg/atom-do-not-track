@@ -71,11 +71,17 @@ export const configSchema = {
         default: true,
         order: 6
       },
+      sentry: {
+        title: 'Sentry',
+        type: 'boolean',
+        default: true,
+        order: 7
+      },
       yandex: {
         title: 'Yandex Metrica',
         type: 'boolean',
         default: true,
-        order: 7
+        order: 8
       }
     }
   }
@@ -109,6 +115,9 @@ export const trackingURLs = {
   ],
   microsoft: [
     '*://*.pipe.aria.microsoft.com/*'
+  ],
+  sentry: [
+    '*://*.ingest.sentry.io/*',
   ],
   yandex: [
     '*://api-metrica.yandex.net/*',

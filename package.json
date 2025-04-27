@@ -29,7 +29,8 @@
     "telemetry",
     "metrica",
     "yandex metrica",
-    "bugsnag"
+    "bugsnag",
+    "sentry"
   ],
   "repository": {
     "type": "git",

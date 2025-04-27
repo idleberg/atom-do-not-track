@@ -50,6 +50,11 @@ export default writable({
       name: 'Microsoft',
       shortName: 'Microsoft'
     },
+    sentry: {
+      counter: 0,
+      name: 'Sentry',
+      shortName: 'Sentry'
+    },
     yandex: {
       counter: 0,
       name: 'Yandex',
