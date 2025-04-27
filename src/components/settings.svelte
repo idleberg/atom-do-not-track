@@ -131,7 +131,7 @@
     display: flex;
     margin-bottom: 1em;
 
-    input, atom-text-editor {
+    atom-text-editor {
       flex-grow: 1;
     }
   }
