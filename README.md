@@ -1,10 +1,9 @@
 # do-not-track
 
-[![License](https://img.shields.io/github/license/idleberg/atom-do-not-track?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/idleberg/atom-do-not-track?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/idleberg/atom-do-not-track?style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/releases)
 [![Downloads](https://img.shields.io/pulsar/dt/do-not-track?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/do-not-track)
 [![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-do-not-track/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-do-not-track/actions)
-
 
 # Description
 
@@ -12,11 +11,13 @@ A package to block web-requests to tracking-servers
 
 ## Installation
 
-### apm
+### Package Manager
 
-Install `do-not-track` from Atom [install view](atom://settings-view/show-package?package=do-not-track) or use the command-line equivalent:
+Install `language-nsis` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
 
-`$ apm install do-not-track`
+```bash
+$ ppm install do-not-track`
+````
 
 ### Using Git
 
@@ -26,18 +27,18 @@ Change to your Atom packages directory:
 
 ```powershell
 # Powershell
-$ cd $Env:USERPROFILE\.atom\packages
+$ cd $Env:USERPROFILE\.pulsar\packages
 ```
 
 ```cmd
 :: Command Prompt
-$ cd %USERPROFILE%\.atom\packages
+$ cd %USERPROFILE%\.pulsar\packages
 ```
 
 **Linux & macOS**
 
 ```bash
-$ cd ~/.atom/packages/
+$ cd ~/.pulsar/packages/
 ```
 
 Clone the repository as `do-not-track`:
