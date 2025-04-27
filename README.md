@@ -16,8 +16,8 @@ A package to block web-requests to tracking servers
 Install `language-nsis` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
 
 ```bash
-$ ppm install do-not-track`
-````
+$ ppm install do-not-track
+```
 
 ### Using Git
 
