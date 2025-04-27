@@ -30,7 +30,8 @@
     "metrica",
     "yandex metrica",
     "bugsnag",
-    "sentry"
+    "sentry",
+    "posthog"
   ],
   "repository": {
     "type": "git",

@@ -41,6 +41,10 @@ export async function updateCount(details: Electron.OnBeforeSendHeadersListenerD
         state.services.microsoft.counter += 1;
         break;
 
+      case multimatch(details.url, trackingURLs.posthog).length > 0:
+        state.services.posthog.counter += 1;
+        break;
+
       case multimatch(details.url, trackingURLs.sentry).length > 0:
         state.services.sentry.counter += 1;
         break;

@@ -71,17 +71,23 @@ export const configSchema = {
         default: true,
         order: 6
       },
+      posthog: {
+        title: 'PostHog',
+        type: 'boolean',
+        default: true,
+        order: 7
+      },
       sentry: {
         title: 'Sentry',
         type: 'boolean',
         default: true,
-        order: 7
+        order: 8
       },
       yandex: {
         title: 'Yandex Metrica',
         type: 'boolean',
         default: true,
-        order: 8
+        order: 9
       }
     }
   }
@@ -115,6 +121,9 @@ export const trackingURLs = {
   ],
   microsoft: [
     '*://*.pipe.aria.microsoft.com/*'
+  ],
+  posthog: [
+    '*://*.i.posthog.com/*',
   ],
   sentry: [
     '*://*.ingest.sentry.io/*',

@@ -50,6 +50,11 @@ export default writable({
       name: 'Microsoft',
       shortName: 'Microsoft'
     },
+    posthog: {
+      counter: 0,
+      name: 'PostHog',
+      shortName: 'PostHog'
+    },
     sentry: {
       counter: 0,
       name: 'Sentry',
