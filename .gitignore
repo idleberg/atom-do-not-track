@@ -2,6 +2,7 @@
 bower_components/
 node_modules/
 *npm-debug.log*
+pnpm-lock.yaml
 yarn.lock
 yarn-error.log
 
