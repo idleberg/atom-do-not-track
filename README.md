@@ -7,7 +7,7 @@
 
 # Description
 
-A package to block web-requests to tracking-servers
+A package to block web-requests to tracking servers
 
 ## Installation
 
